@@ -1,0 +1,23 @@
+1. a, g
+
+2. f, i // Wrong. e is legal, too.
+
+3.
+    a. sum = 0.0; should be *sum = 0.0
+    b. sum += a[i] should be *sum += a[i]
+    c. avg = sum / n should *avg = *sum / n
+
+4.
+    void swap(int *p, int *q) {
+        int temp = *p;
+        *p = *q;
+        *q = temp;
+    }
+
+5. In file src/split_time.c.
+
+6. In file src/find_two_largest.c. // Correct, but not the best solution.
+
+7. In file src/split_date.c.
+
+8. In file src/find_largest.c.

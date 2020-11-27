@@ -1,0 +1,70 @@
+1.
+    a. height parameters is missing its type.
+    b. `double product;` declaration should be inside the function body.
+
+2. In file: src/check.c.
+
+3. In file: src/gcd.c.
+
+4. In file: src/day_of_year.c.
+
+5. In file: src/num_digits.c.
+
+6. In file: src/digit.c
+
+7.
+    a. Legal
+    b. Legal
+    c. Not legal // wrong
+    d. Not legal // wrong
+    e. Legal
+
+8.
+    a. Legal
+    b. Legal
+    c. Not legal
+    d. Not legal
+
+9. i = 1, j = 2 
+
+10. In file: src/10.c
+
+11. In file: src/compute_gpa.c.
+
+12. In file: src/12.c.
+
+13. In file: src/13.c.
+
+14.
+    bool has_zero(int a[], int n) {
+        int i;
+
+        for (i = 0; i < n; i++)
+            if (a[i] == 0)
+                return true;
+
+        return false;
+    }
+
+15. In file: src/15.c.
+
+16.
+    int fact(int n) {
+        return n == 1 ? 1 : n * fact(n - 1);
+    }
+
+17.
+    int fact(int n) {
+        int res = 1;
+
+        for (int i = 1; i <= n; i++)
+            res *= i;
+
+        return res;
+    }
+
+18. In file: src/rec_gcd.c.
+
+19.
+    a. In file: src/mystery.c. 
+    b. It prints n i base 2. So, converts decimal to binary. 

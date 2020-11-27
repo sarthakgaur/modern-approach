@@ -1,0 +1,151 @@
+1.
+    a. Legal.
+    b. Not legal. "\n" is a string, not a single character.
+    c. Not leagal. %s is the conversion specification for string.
+    d. Legal.
+    e. Not legal. printf expects a string pointer.
+    f. Legal.
+    g. Legal.
+    h. Not legal. putchar expects a single character.
+    i. Not legal. puts expects a string pointer.
+    j. Legal. // Wrong. It will put two new line characters.
+    k. Legal. "\n" is appended automatically.
+
+2.
+    a. Not legal.
+    b. Legal. Prints "a".
+    c. Legal. Prints "abc\n".
+    d. Not legal.
+
+3. i=12, s="abc", j=34. // Wrong.
+
+4.
+    a.
+        int read_line(char str[], int n) {
+            int ch, i = 0;
+
+            while ((ch = getchar()) == ' ')
+                ;
+
+            if (i < n)
+                str[i++] = ch;
+
+            while ((ch = getchar()) != '\n')
+                if (i < n)
+                    str[i++] = ch;
+            str[i] = '\0';
+            return i;
+        }
+
+    b.
+        int read_line(char str[], int n) {
+            int ch, i = 0;
+
+            while ((ch = getchar()))
+                if (!isspace(ch) && i < n)
+                    str[i++] = ch;
+            str[i] = '\0';
+            return i;
+        }
+
+    c.
+        int read_line(char str[], int n) {
+            int ch, i = 0;
+
+            while ((ch = getchar()) != '\n')
+                if (i < n)
+                    str[i++] = ch;
+            str[i++] = '\n'; 
+            str[i] = '\0';
+            return i;
+        }
+
+    d.
+        int read_line(char str[], int n) {
+            int ch, i = 0;
+
+            while (i < n && (ch = getchar()) != '\n')
+                str[i++] = ch;
+            str[i] = '\0';
+            return i;
+        }
+
+5.
+    a.
+        void captitalize(char content[]) {
+            int i = 0;
+
+            while (content[i] != '\0') {
+                content[i] = toupper(content[i]);
+                i++;
+            }
+        }
+
+    b.
+        void captitalize(char content[]) {
+            char *p = content;
+
+            while (*p != '\0') {
+                *p = toupper(*p);
+                p++;
+            }
+        }
+
+6. In file src/sensor.c.
+
+7. d is not similar to the other three.
+
+8. tired-or-wired? 
+
+9. "computersc\0" // Wrong.
+
+10. q is a char pointer not a string. Also, we can't return a pointer to a local variable.
+
+11.
+    int strcmp(char *s, char *t) {
+        while (*s == *t) {
+            if (*s == '\0')
+                return 0;
+            s++, t++;
+        }
+        return *s - *t;
+    }
+
+12. In file src/extension.c.
+
+13.
+    void build_index_url(const char *domain, char *index_url) {
+        strcpy(index_url, "http://www.");
+        strcat(index_url, domain);
+        strcat(index_url, "/index.html");
+    }
+
+14. Grinch
+
+15.
+    a. 3
+    b. 0
+    c. Difference between first pointer and n pointer that points to a character that is not in the second string. or the difference between first and last pointer in s.
+
+16.
+    int count_spaces(const char s[]) {
+        int count = 0;
+
+        while (*s != '\0')
+            if (*s++ == ' ')
+                count++;
+        return count;
+    }
+
+17. In file src/test_ext.c.
+
+18.
+    void remove_filename(char *url) {
+        char *last_slash;
+
+        while (*url)
+            if (*url++ == '/')
+                last_slash = url;
+
+        *last_slash = '\0';
+    }

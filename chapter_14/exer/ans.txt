@@ -1,0 +1,108 @@
+1.
+    a. #define CUBE(x) ((x)*(x)*(x))
+    b. #define REMFOUR(n) ((n) % 4)
+    c. #define DIFF(x, y) ((x) * (y) < 100 ? 1 : 0) 
+    q: Will always work.
+
+2. #define NELEMS(a) (sizeof(a) / sizeof(a[0]))
+
+3.
+    a. 4
+    b. 4
+    c. #define DOUBLE(x) (2*(x))
+
+4.
+    a. 12 / AVG(3, 3) should return 4 but returns 1.
+    b. 6 / AREA(3, 2) should return 1 but returns 4.
+    Fixes:
+        #define AVG(x, y) (((x)+(y))/2) // Wrong. Operand of + should be a parenthesis.
+        #define AREA(x, y) ((x)*(y))
+
+5.
+    a. D
+    b. 2
+
+6.
+    a. #define DISP(fn, x)     printf(#fn "(%g) = %g\n", (x), (fn((x))))
+    b. #define DISP2(fn, x, y) printf(#fn "(%g, %g) = %g\n", (x), (y), (fn((x), (y))))
+
+7.
+    a.
+        long long_max(long x, long y) {
+            return x > y ? x : y;
+        }
+    b. The function will have an invalid name.
+    c. We can use typedef like the following:
+        typedef unsigned long ulong;
+        GENERIC_MAX(ulong);
+
+8. #define LINE_FILE() "Line " #__LINE__ " of file " #__FILE__ // Wrong.
+
+9.
+    a. #define CHECK(x, y, n) ((x) >= 0 && (x) < (n) && (y) >= 0 && (y) < (n))
+    b. #define MEDIAN(x, y, z) ((x) > (y) && (y) > (z) ? (y) : (y) > (x) && (x) > (z) ? (x) : (z))
+    c. #define POLYNOMIAL(x)    \
+        ( 3*(x)*(x)*(x)*(x)*(x) \ 
+        + 2*(x)*(x)*(x)*(x)     \
+        - 5*(x)*(x)*(x)         \
+        - (x) * (x)             \
+        + 7 * (x)               \
+        - 6)
+
+10.
+    1. Arguments with side effects cannot be passed to parameterized macros.
+    2. Parameterized macros cannot be used as pointers.
+    3. Parameterized macros do not perform type checking.
+
+11. #define ERROR(str, ...) (fprintf(stderr, (str), __VA_ARGS__)) // Wrong. Missed the paranthesis.
+
+12. 
+    a. Won't fail
+    b. Won't fail
+    c. Will fail
+    d. Won't fail
+    e. Will fail
+
+13.
+    void f(void);
+
+    int main(void) {
+        f();
+        return 0;
+    }
+
+    void f(void) {
+        printf("N is undefined\n");
+    }
+
+    Output: N is undefined
+
+14.
+    int main(void) {
+        int a[N], i, j, k, m; // missed error here
+
+        i = j; // j is not initialzed
+
+        i = 10 * j + 1;
+        i = j - k; // missed error here
+        i = j * j * j * j; 
+        i = j * j * j;
+        i = jk; // jk is not defined
+        puts("ij"); 
+
+        i = SQR(j); // SQR is undefined 
+        i = (j);
+
+        return 0;
+    } // Wrong.
+
+15.
+#if defined(ENGLISH)
+    printf("Insert Disk 1\n");
+#elif defined(FRENCH) 
+    printf("Inserez Le Disque\n");
+#elif defined(SPANISH)
+    printf("Insert Disk 1\n");
+#endif
+
+16. #pragma ident "foo" 

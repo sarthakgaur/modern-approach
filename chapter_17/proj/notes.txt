@@ -1,0 +1,13 @@
+1. In folder src/inventory.
+
+2. In folder src/inventory2.
+
+3. In folder src/inventory3.
+
+4. In folder src/justify.
+
+5. In file src/sort_word.c.
+
+6. In file src/sort_word.c.
+
+7. In file src/remind2.c.

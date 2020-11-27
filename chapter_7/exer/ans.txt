@@ -1,0 +1,70 @@
+1.
+    a. 63
+    b. 119
+    c. 2748
+
+2.
+    a. Legal
+    b. Legal
+    c. Legal // Wrong. 9 is not a valid in octal.
+    d. Not legal
+    e. Legal
+
+3.
+    a. Legal
+    b. Not legal
+    c. Legal
+    d. Legal
+
+4.
+    a. Legal
+    b. Legal
+    c. Legal
+    d. Not legal
+
+5.
+    a. Legal
+    b. Legal // Wrong. Not allowed in C.
+    c. Legal
+    d. Legal
+
+6.
+    a. char
+    b. short
+    c. short
+    d. int // Wrong. Should be long.
+
+7.
+    a. \10
+    b. \12
+    c. \15
+    d. \11
+    
+8.
+    a. \x08
+    b. \x0a
+    c. \x0d
+    d. \x09
+
+9. int.
+
+10. unsigned int.
+
+11. double.
+
+12. i is converted to float and then added to f. The value after addition is converted to double.
+
+13.
+    a. -3, int
+    b. 7, long
+    c. 6.5f, float
+    d. 3.75, double
+    e. -1.0, double
+    f. 6, int
+
+14. If f is negative, the value of the expression will not only contain the fractional part. Example: -6.5 - -6 -> -12.5. // Wrong. This can result in an overflow.
+
+15. 
+    1. typedef char Int8;
+    2. typedef short Int16;
+    3. typedef int Int32;

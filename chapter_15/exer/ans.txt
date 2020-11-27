@@ -1,0 +1,47 @@
+1.
+    a. 
+        1. Helps in organising large projects.
+        2. Improves readibility.
+    b.
+        1. Writing makefiles can get complex.
+        2. Designing the program can take more time.
+        3. Comments of code are in a separate files.
+
+2. Function definitions. Any change in headers will require more compilation. // Wrong reason.
+
+3. No. After scanning the current directory, the compiler will scan the system files. // Wrong reason.
+
+4.
+    a.
+        Output if DEBUG is defined:
+        Value of i: 1
+        Value of j: 2
+        Value of k: 3
+        Value of i + j: 3
+        Value of 2 * i + j - k: 1
+
+    b.  
+        Output if DEBUG is not defined:
+
+    c. If debug is not defined PRINT_DEBUG(n) will be replaced by empty lines.
+
+    d. Yes, otherwise PRINT_DEBUG(n) will be replaced by empty lines.
+
+5.
+main: main.o f1.o f2.o
+      gcc -o demo main.o f1.o f2.o
+
+main.o: main.c f1.h
+        gcc -c main.c
+
+f1.o: f1.c f1.h f2.h // Wrong here
+      gcc -c f1.c
+
+f2.o: f2.c f1.h f2.h // Wrong here
+      gcc -c f2.c
+
+6.
+    a. main.c f1.c f2.c.
+    b. f1.c 
+    c. main.c f1.c f2.c
+    d. f1.c f2.c

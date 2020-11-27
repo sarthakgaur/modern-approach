@@ -1,0 +1,15 @@
+1. In file src/selection_sort.c.
+
+2. In file src/tax.c.
+
+3. In file src/random_walk.c.
+
+4. In file src/anagrams.c.
+
+5. In file src/magic_square.c.
+
+6. In file src/poly.c.
+
+7. In file src/power.c.
+
+8. In file src/craps.c.

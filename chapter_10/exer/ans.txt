@@ -1,0 +1,13 @@
+1.
+    a. a, b, c
+    b. a, d
+    c. a, d, e
+    d. a, f
+
+2.
+    a. c, local b, d
+    b. b, a, local c
+    c. b, local c(in g), local a, d
+    d. b, local c, d 
+
+3. As many as we want. Each block can have its own i.

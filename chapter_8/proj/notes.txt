@@ -1,0 +1,27 @@
+1. In file: src/repdigit.c.
+
+2. In file: src/repdigit2.c.
+
+3. In file: src/repdigit3.c.
+
+4. In file: src/reverse.c.
+
+5. In file: src/interest.c.
+
+6. In file: src/biff.c.
+
+7. In file: src/matrix_sum.c.
+
+8. In file: src/quiz_stat.c.
+
+9. In file: src/random_walk.c.
+
+13. In file: src/fmtname.c.
+
+14. In file: src/sent_rev.c.
+
+15. In file: src/cipher.c
+
+16. In file: src/anagrams.c
+
+17. In file: src/magic_square.c.

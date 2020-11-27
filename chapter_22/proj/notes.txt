@@ -1,0 +1,42 @@
+1. In file src/1/canopen.c.
+
+2. In file src/2/toupper.c.
+
+3. In file src/3/fcat.c.
+
+4.
+    a. In file src/4/char_count.c
+    b. In file src/4/word_count.c
+    c. In file src/4/line_count.c
+
+5. In file src/5/xor.c.
+
+6. In file src/6/disp_contents.c.
+
+7.
+    a. In file src/7/compress_file.c.
+    b. In file src/7/uncompress_file.c.
+
+8.  In folder src/8.
+
+9. In file src/9/merge_records.c.
+
+10. In folder src/10/.
+
+11. In file src/11/date.c.
+
+12. In file src/12/purchase_info.c.
+
+13. In file src/13/closet_departure.c.
+
+14. In file src/14/cipher.c.
+
+15. In folder src/15.
+
+16. In file src/16/fcopy.c.
+
+17. In file src/17/fmt_phone.c.
+
+18. In file src/18/num_sort.c.
+
+19. In folder src/19.

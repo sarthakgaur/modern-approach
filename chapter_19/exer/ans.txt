@@ -1,0 +1,13 @@
+1. In file src/queue.h.
+
+2. In file src/stack2.c.
+
+3. In folder src/queue.
+
+4. In folder src/stack_type.
+
+5. In file src/queue2.h.
+
+6. In folder src/stackADT.
+
+7. In folder src/stack3.

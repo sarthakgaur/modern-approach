@@ -1,0 +1,31 @@
+1. The technique is inferior because we could enter a wrong type by mistake which will lead to programming errors. And, it will be much harder to debug what is causing the problem. By using the old technique, we don't care what is the type of a and we'll get the correct size everytime.
+
+2. arr['0' - ch]; // Wrong. Should be arr[ch - '0']
+
+3. bool weekend[] = {true, false, false, false, false, false, true};
+
+4. bool weekend[] = {[0] = true, [6] = true};
+
+5. In file: src/fib.c.
+
+6.
+    const int segments[10][7] = {{1, 1, 1, 1, 1, 1, 0}, // 0
+                                 {0, 1, 1, 0, 0, 0, 0}, // 1
+                                 {1, 1, 0, 1, 1, 0, 1}, // 2
+                                 {1, 1, 1, 1, 0, 0, 1}, // 3
+                                 {0, 1, 1, 0, 0, 1, 1}, // 4
+                                 {1, 0, 1, 1, 0, 1, 1}, // 5
+                                 {1, 0, 1, 1, 1, 1, 1}, // 6
+                                 {1, 1, 1, 0, 0, 0, 0}, // 7
+                                 {1, 1, 1, 1, 1, 1, 1}, // 8
+                                 {1, 1, 1, 1, 0, 1, 1}}; // 9
+
+7. This is stupid.
+
+8. In file: src/temps.c.
+
+9. In file: src/temps.c.
+
+10. In file: src/chess_board.c.
+
+11. In file: src/checker_board.c.

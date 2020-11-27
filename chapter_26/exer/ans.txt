@@ -1,0 +1,31 @@
+1. In file src/1.c.
+
+2. In file src/2.c.
+
+3. In file src/3.c.
+
+4. In file src/4.c.
+
+5. In file src/5.c.
+
+6. In file src/6.c.
+
+7. The statement value = strtol(p, &p, 10); consumes the long int value at the start of the string, and points p to the string of character after the long int.
+
+8. n = ((rand() % 4) * 4) + 7; 
+
+9. In file src/9.c.
+
+10.
+    a. strtol(str, NULL, 10)
+    b. strtol(str, NULL, 10)
+    c. strtoll(str, NULL, 10)
+
+11. If the first half of the array is sorted the bsearch will work correctly if the key fall in the first half.
+
+12. In file src/12.c.
+
+13.
+    a. strftime(date_time, sizeof(date_time), "%Y-%j\n", localtime(&current));
+    b. strftime(date_time, sizeof(date_time), "%Y-W%V-%u\n", localtime(&current));
+    c. strftime(date_time, sizeof(date_time), "%Y-%m-%dT%H:%M:%S\n", localtime(&current));

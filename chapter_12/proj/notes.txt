@@ -1,0 +1,13 @@
+1. In file src/msg_rev.c.
+
+2. In file src/palin.c.
+
+3. This was stupid.
+
+4. This was stupid.
+
+5. In file src/sent_rev.c.
+
+6. In file src/qsort.c.
+
+7. In file src/maxmin.c. 

@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(void)
+{
+    int gs1, group_ident, pub_code, item_num, check_dig;
+
+    printf("Enter ISBN: ");
+    scanf("%d-%d-%d-%d-%d", &gs1, &group_ident, &pub_code, &item_num, &check_dig);
+
+    printf("GS1 prefix: %d\n", gs1);
+    printf("Group identifier: %d\n", group_ident);
+    printf("Publisher code: %d\n", pub_code);
+    printf("Item number: %d\n", item_num);
+    printf("Check digit: %d\n", check_dig);
+    
+    return 0;
+}

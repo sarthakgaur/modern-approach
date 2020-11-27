@@ -1,0 +1,39 @@
+1.
+    a. int: 46341
+    b. char: 182
+    c. This one was stupid
+
+2. In file src/square2_enter.c.
+
+3. In file src/sum2.c.
+
+4. In file src/phone_num.c.
+
+5. In file src/scrabble.c.
+
+6. In file src/sizes.c.
+
+7. In file src/opfrac.c.
+
+8. In file src/closet_departure.c.
+
+9. In file src/timeconv.c.
+
+10. In file src/vowels.c.
+
+11. In file src/fmtname.c.
+
+12. In file src/evalexpr.c
+
+13. In file src/wordlen.out
+
+14. In file src/newton_square.c
+
+15. In file src/factorial.c
+    a. 7
+    b. 12 
+    c. 20
+    d. 20
+    e. 13
+    f. 22
+    g. 25

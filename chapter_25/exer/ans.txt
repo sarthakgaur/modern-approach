@@ -1,0 +1,41 @@
+1. In file dump/locales.txt.
+
+2.
+    a. 0
+    b. -1
+    c. -1
+    d. 0
+
+3. No.
+
+4.
+    a. "C\xf4te d'Azur"
+    b. "cr\xe8me br\xfbl\xe9e"
+    c. "cr\xe8me fra\xeeche"
+    d. "Fahrvergn\xfcgen"
+    e. "t\xeate-\xe0-t\xeate"
+
+5.
+    a. "C\xc3\xb4te d'Azur"
+    b. "cr\xc3\xa8me br\xc3\xbbl\xc3\xa9e"
+    c. "cr\xc3\xa8me fra\xc3\xaeche"
+    d. "Fahrvergn\xc3\xbcgen"
+    e. "t\xc3\xaate-\xc3\xa0-t\xc3\xaate"
+
+6. 
+    while ((orig_char = getchar()) != EOF) ??<
+        new_char = orig_char ??' KEY;
+        if (isprint(orig_char) && isprint(new_char))
+            putchar(new_char);
+        else
+            putchar(orig_char);
+    ??>
+
+7.
+    while ((orig_char = getchar()) not_eq EOF) <%
+        new_char = orig_char xor KEY;
+        if (isprintf(orig_char) and isprintf(new_char))
+            putchar(new_char);
+        else
+            putchar(orig_char);
+    %>

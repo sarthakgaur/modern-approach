@@ -1,0 +1,134 @@
+1.
+    a. 14
+    b. 34
+    c. 4
+    d. true
+    e. false
+
+2.
+    Type int cannot be assigned to int. 
+    middle = low + (high - low) / 2; // Wrong. Pointers cannot be added to each other.
+
+3. {10, 9, 8, 7, 6, 5, 4, 3, 2, 1}
+
+4. In file src/stack.c.
+
+5.
+    a. Illegal
+    b. Legal, 1
+    c. Legal, 1
+    d. Illegal // Wrong. This is Legal, 1.
+
+6.
+    int sum_array(const int *a, int n) {
+        int *p, sum;
+
+        sum = 0;
+        for (p = a; p < a + n; p++)
+            sum += *p;
+        return sum;
+    }
+
+7.
+    bool search(const int a[], int n, int key) {
+        int *p;
+
+        for (p = a; p < a + n; p++)
+            if (*p == key)
+                return true;
+
+        return false;
+    }
+
+8.
+    void store_zeros(int a[], int n) {
+        int *p;
+
+        for (p = a; p < a + n; p++)
+            *p = 0;
+    }
+
+9.
+    double inner_product(const double *a, const double *b, int n) {
+        int res = 0;
+        int *p1 = a;
+        int *p2 = b;
+
+        while (p1 < a + n) {
+            res += *p1 * *p2;
+            p1++;
+            p2++;
+        }
+
+        return res;
+    }
+
+10.
+    int *find_middle(int a[], int n) {
+        return a + (n / 2);
+    }
+
+11.
+    int find_largest(int a[], int n) {
+        int *p, max;
+
+        max = *a;
+        for (p = a; p < a + n; p++)
+            if (*p > max)
+                max = *p;
+        return max;
+    }
+
+12.
+    void find_two_largest(const int *a, int n, int *largest, int *second_largest) {
+        int i = 0;
+        *largest = *a;
+        *second_largest = *a;
+
+        while (a + i < a + n) {
+            if (*(a + i) > *largest) {
+                *second_largest = *largest;
+                *largest = *(a + i);
+            } else if (*(a + i) > *second_largest) {
+                *second_largest = *(a + i);
+            }
+            i++;
+        }
+    }
+
+13. In file src/13.c.
+
+14.
+    bool search(const int a[][24], int n, int key) {
+        const int *p;
+        for (p = &a[0][0]; p < &a[n-1][24]; p++)
+            if (*p == key)
+                return true;
+
+        return false;
+    }
+
+15.
+    for (p = &a[i][0]; p < &a[i][24]; p++)
+        printf("%d ", *p);
+    
+16.
+    int max = a[0][0];
+    int *p;
+    for (p = &a[0]; p < &a[N-1][N]; p += 24) {
+        int tmax = find_largest(p, 24);
+        if (tmax > max) max = tmax;
+    } // Wrong.
+
+17.
+    int sum_two_dimensional_array(const int a[][LEN], int n) {
+        int sum = 0;
+        const int *p;
+
+        for (p = a; p < &a[n-1][LEN]; p++)
+            sum += *p;
+
+        return sum;
+    }
+
+18. In file src/18.c.

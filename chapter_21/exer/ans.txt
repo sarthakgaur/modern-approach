@@ -1,0 +1,29 @@
+1. /usr/include
+
+2. tolower() in ctype.h.
+
+3. It doesn't matter. // Wrong
+
+4. Not done.
+
+5. It evaluates its arguments twice.
+
+6.
+    a. To indicate that these macros are not meant to be used by the programmer.
+    b.
+        // ctype contains numbers.
+        a. 40
+        b. 160
+        c. 1
+        d. 8
+    c. We can easily lookup the types of the character by using the character as an offset.
+
+7.
+    a. time.h
+    b. ctype.h
+    c. limits.h
+    d. math.h
+    e. ctype.h // Wrong
+    f. float.h
+    g. string.h
+    h. stdio.h

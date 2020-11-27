@@ -1,0 +1,291 @@
+1. No, the name of the members needs to be unique. // Wrong.
+
+2. 
+    a.
+        struct {
+            double real;
+            double imaginary;
+        } c1, c2, c3;
+
+    b.
+        struct {
+            double real;
+            double imaginary;
+        } c1 = {0.0, 1.0},
+          c2 = {1.0, 0.0};
+
+    c.
+        c1 = c2;
+
+    d.
+        struct {
+           double real;
+           double imaginary;
+        } c3;
+
+        c3.real = c1.real + c2.real;
+        c3.imaginary = c1.imaginary + c2.imaginary;
+
+3.
+    a.
+        struct complex {
+            double real;
+            double imaginary;
+        };
+
+    b.
+        struct complex c1;
+        struct complex c2;
+        struct complex c3;
+
+    c.
+        struct complex make_complex(double n1, double n2) {
+            return (struct complex) {n1, n2};
+        }
+
+    d.
+        struct complex add_complex(struct complex s1, struct complex s2) {
+            return (struct complex) {s1.real + s2.real, s1.imaginary + s2.imaginary};
+        }
+
+4.
+    a.
+        typedef struct {
+            double real;
+            double imaginary;
+        } Complex;
+
+    b.
+        Complex c1;
+        Complex c2;
+        Complex c3;
+
+    c.
+        Complex make_complex(double n1, double n2) {
+            return (Complex) {n1, n2};
+        }
+
+    d.
+        Complex add_complex(Complex s1, Complex s2) {
+            return (Complex) {s1.real + s2.real, s1.imaginary + s2.imaginary};
+        }
+
+5.
+    a.
+        int day_of_year(struct date d) {
+            int days[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+
+            if (d.year % 400 == 0 || (d.year % 4 == 0 && d.year % 100 != 0))
+                days[1] = 29;
+
+            int total_days = 0;
+
+            for (int i = 0; i < d.month; i++)
+                total_days += days[i];
+
+            total_days += d.days;
+
+            return total_days;
+        }
+
+    b.
+        int compare_date(struct date d1, struct date d2) {
+            if (d1.year < d2.year)
+                return -1;
+            else if (d1.year > d2.year)
+                return 1;
+            else if (d1.month < d2.month)
+                return -1;
+            else if (d1.month > d2.month)
+                return 1;
+            else if (d1.days < d2.days)
+                return -1;
+            else if (d1.days > d2.days)
+                return 1;
+            else
+                return 0;
+        }
+
+6.
+    struct time split_time(long total_seconds) {
+        int hour, min, sec;
+
+        sec = total_seconds % 60;
+        total_seconds -= sec;
+
+        min = total_days / 60 % 60;
+        total_seconds -= min * 60;
+
+        hour = total_seconds / 60 / 60;
+
+        return (struct time) {hour, min, sec};
+    }
+
+7.
+    a.
+        struct fraction red_frac(struct fraction f) {
+            int n = f.numerator;
+            int d = f.denominator;
+            int r;
+
+            while (d != 0) {
+                r = n % d;
+                n = d;
+                d = r;
+            }
+
+            return (struct fraction) {f.numerator / n, f.denominator / n};
+        }
+
+    b.
+        struct fraction add_frac(struct fraction f1, struct fraction f2) {
+            int n = f1.numerator * f2.denominator + f2.numerator * f1.denominator;
+            int d = f1.denominator * f2.denominator;
+            return (struct fraction) {n, d};
+        }
+
+    c.
+        struct fraction add_frac(struct fraction f1, struct fraction f2) {
+            int n = f1.numerator * f2.denominator - f2.numerator * f1.denominator;
+            int d = f1.denominator * f2.denominator;
+            return (struct fraction) {n, d};
+        }
+
+    d.
+        struct fraction mul_frac(struct fraction f1, struct fraction f2) {
+            int n = f1.numerator * f2.numerator;
+            int d = f1.denominator * f2.denominator;
+            return (struct fraction) {n, d};
+        }
+
+    e.
+        struct fraction div_frac(struct fraction f1, struct fraction f2) {
+            int n = f1.numerator * f2.denominator;
+            int d = f1.denominator * f2.numerator;
+            return (struct fraction) {n, d};
+        }
+
+8.
+    a.
+        const struct color MAGENTA = {255, 0, 255};
+
+    b.
+        const struct color MAGENTA = {.red = 255, .blue = 255};
+
+9. In file src/color.c.
+
+10. In file src/points.c.
+
+11. 20 bytes.
+
+12. 16 bytes.
+
+13.
+    a. Legal
+    b. Legal
+    c. Not legal, should be s.u.rectangle.height = 25;
+    d. Legal
+    e. Not legal, should be s.u.circle.radius = 8;
+    f. Not legal, should be s.u.circle.radius = 8;
+
+14. In file src/shape.c.
+
+15.
+    a.
+        enum week_days {
+            MONDAY,
+            TUESDAY,
+            WEDNESDAY,
+            THURSDAY,
+            FRIDAY,
+            SATURDAY,
+            SUNDAY,
+        };
+
+    b.
+        typedef enum {
+            MONDAY,
+            TUESDAY,
+            WEDNESDAY,
+            THURSDAY,
+            FRIDAY,
+            SATURDAY,
+            SUNDAY,
+        } WEEK_DAYS;
+
+16.
+    a. True
+    b. False
+    c. True
+    d. False
+    e. True
+
+17.
+    a. Legal and safe
+    b. Legal but not safe
+    c. Legal but not safe
+    d. Legal and safe
+    e. Legal and safe
+
+18. In file src/board.c.
+
+19.
+    struct pinball_machine {
+        char name[40+1];
+        int year;
+        enum machine_type {EM, SS} type;
+        int players;
+    };
+
+20.
+    switch (direction) {
+        case NORTH: y--;
+                    break;
+        case SOUTH: y++;
+                    break; 
+        case EAST: x++;
+                   break;
+        case WEST: x--;
+                   break;
+    }
+
+21.
+    a.
+        1. NUL = 0
+        2. SOH = 1
+        3. STX = 2
+        4. ETX = 3
+
+    b.
+        1. VT = 11
+        2. FF = 12
+        3. CR = 13
+
+    c.
+        1. SO  = 14
+        2. SI  = 15
+        3. DLE = 16
+        4. CAN = 24
+        5. EM  = 25
+
+    d.
+        1. ENQ = 45
+        2. ACK = 46
+        3. BEL = 47
+        4. LF  = 37
+        5. ETB = 38
+        6. ESC = 39
+
+22.
+    a.
+        const int piece_value[] = {200, 9, 5, 3, 3, 1};
+
+    b.
+        const int piece_value[] = {
+            [KING]   = 200,
+            [QUEEN]  = 9,
+            [ROOK]   = 5,
+            [BISHOP] = 3,
+            [KNIGHT] = 3,
+            [PAWN]   = 1,
+        };

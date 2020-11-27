@@ -1,0 +1,11 @@
+1. In file src/stack.c.
+
+2. In file src/poker.c.
+
+3. Not done. This was stupid.
+
+4. In file src/poker3.c.
+
+5. In file src/poker4.c.
+
+6. In file src/calc.c.

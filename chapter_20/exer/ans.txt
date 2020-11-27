@@ -1,0 +1,94 @@
+1.
+    a. 0
+    b. 0
+    c. 1
+    d. 15
+
+2.
+    i = i ^ (1 << 4);
+
+3. The macro swaps the value of x and y.
+
+4.
+    // assuming big-endian byte ordering
+    #define MK_COLOR(B, G, R) 0x00##B##G##R
+
+5.
+    #define GET_RED(n)   ((n) & 0xff)
+    #define GET_GREEN(n) (((n) >> 8) & 0xff)
+    #define GET_BLUE(n)  (((n) >> 16) & 0xff)
+
+6. In file src/swap_bytes.c.
+
+7. In file src/rotate.c.
+
+8.
+    a. Set n number of bits to 1 and rest to 0.
+    b. Save the last n bits in i after shifting its bits to the right (m + 1 - n) times. // wrong
+
+9.
+    int count_ones(unsigned char ch) {
+        int count = 0;
+
+        if (ch & 1) count++;
+        if (ch >> 1 & 1) count++;
+        if (ch >> 2 & 1) count++;
+        if (ch >> 3 & 1) count++;
+        if (ch >> 4 & 1) count++;
+        if (ch >> 5 & 1) count++;
+        if (ch >> 6 & 1) count++;
+        if (ch >> 7 & 1) count++;
+
+        return count;
+    }
+
+10. In file src/reverse_bits.c.
+
+11.
+    if ((key_code & (SHIFT_BIT | CTRL_BIT | ALT_BIT)) == 0)
+        printf("No modifier keys pressed\n");
+
+    // == has higher precedence, so the ordering of the statement will not give the desired result
+
+12.
+    // The return value of that statement will be 0 because 8 will be added to low_byte
+    // and the high byte will be shifted 8+ bits left.
+    unsigned short create_short(unsigned char high_byte, unsigned char low_byte) {
+        unsigned short sh = 0;
+        return ((sh | high_byte) << 8) | low_byte;
+    }
+
+13. Keeps subtraction 1 from n. // Wrong
+
+14.
+    struct float_part {
+        unsigned int sign: 1;
+        unsigned int exponent: 8;
+        unsigned int fraction: 23;
+    } fp; // Wrong
+
+15. The issue is of the byte order. If big endian is followed it will set the sign bit to 1. Which results in -1. If little endian order is followed it will set flag to 1 correctly. We can use the following field to set the flag correctly.
+
+    struct {
+        unsigned int: 31;
+        unsigned int flag: 1;
+    } s; // Wrong
+
+16.
+    typedef unsigned int DWORD;
+    typedef unsigned short WORD;
+    typedef unsigned char BYTE;
+
+    union {
+        struct {
+            DWORD EAX, EBX, ECX, EDX;
+        } dword;
+
+        struct {
+            WORD AX, AD, BX, BD, CX, CD, DX, DD;
+        } word;
+
+        struct {
+            BYTE al, ah, adl, adh, bl, bh, bdl, bdh, cl, ch, cdl, cdh, dl, dh, ddl, ddh;
+        } byte;
+    } regs;

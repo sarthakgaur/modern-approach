@@ -1,0 +1,15 @@
+1. File: src/mark.c.
+
+2. File: src/sphere_volume.c.
+
+3. File: src/sphere_volume.c. Input feature added.
+
+4. File: src/tax.c.
+
+5. File: src/poly.c.
+
+6. File src/poly.c. Formula changed.
+
+7. File src/dollar_split.c.
+
+8. File src/loan.c

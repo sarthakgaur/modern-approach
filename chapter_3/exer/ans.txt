@@ -1,0 +1,19 @@
+1.
+    a.    86,1040
+    b. 3.02530e+01
+    c.83.1620
+    d.1e-06
+
+2. In file: src/printf2.c
+
+3.
+    a. Same.
+    b. Not same. "1 -2-3" won't match in the first case.
+    c. Not same. In the second case a non-white space character is required to terminate the input.
+    d. Same.
+
+4. i=10, x=.3, j=5
+
+5. x=12.3, i=45, y=.6
+
+6. In file: src/addfracm.c

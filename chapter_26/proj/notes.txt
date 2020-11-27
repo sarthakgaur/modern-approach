@@ -1,0 +1,18 @@
+1. In file src/1.c.
+    a. No I don't see any pattern.
+    b. Taking the time_t value and dividing it by a prime number.
+
+2. In file src/2.c.
+
+3. In file src/3.c.
+    Times:
+    a. 0.000244
+    b. 0.001620
+    c. 0.009886
+
+4. In file src/4.c.
+
+5. In file src/5.c.
+
+6. In file src/6.c.
+

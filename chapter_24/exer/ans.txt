@@ -1,0 +1,14 @@
+1.
+    a. If we go out of bounds an assert call can terminate the program instead of accessing illegal memory.
+    b.
+        1. Memory allocation
+        2. Opening a file
+        3. Setting a signal handler
+
+2. assert(top != NULL);
+
+3. In folder src/stack3.
+
+4. In file src/4.c.
+
+5. In folder src/inventory.

@@ -1,0 +1,3 @@
+1. In file src/local_test.c.
+
+2. In file src/locale_info.c.

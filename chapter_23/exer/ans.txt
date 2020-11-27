@@ -1,0 +1,46 @@
+1. In file src/1.c.
+
+2.
+    double evaluate_polynomial(double a[], int n, double x) {
+        double res;
+        res = a[n] * x + a[n-1];
+
+        int i = 2;
+
+        while (i <= n) {
+            res *= x + a[n - i];
+            i++;
+        }
+
+        return res;
+    }
+
+3. Yes. -ffp-contract=fast.
+
+4. In file src/4.c.
+
+5. In file src/5.c.
+
+6.
+    a. memmove
+    b. memmove
+    c. memcpy
+    d. memcpy
+
+7. No, you cannot.
+
+8. In file src/8.c.
+
+9. if (ch >= 'a' && ch <= 'c' && strchr(str, ch++)) // Wrong
+
+10.
+    if (strstr("foo\nbar\nbaz", str) != NULL)
+        Assumptions:
+        If the string contains " foo" instead of "foo" this won't work.
+        If the string contains "foo\n" it will match.
+
+11. memset(block + (sizeof(block) - n), '!', n) // Wrong. Use strlen.
+
+12. In src/12.c.
+
+13. In file src/13.c.

@@ -1,0 +1,92 @@
+1.
+    a. Binary
+    b. Binary // Wrong
+    c. Text
+    d. Binary
+
+2.
+    a. w // Wrong
+    b. a
+    c. r
+    d. r
+
+3.
+    FILE *fp;
+
+    if (fp = fopen(filename, "r")) {
+        // read characters until end-of-file
+        fclose(fp);
+    }
+
+// didn't complete
+4.
+    a. 
+    b.
+    c.
+    d.
+
+5. In the integer is negative the output will be different. One less zero in %04d case.
+
+6. printf(n > 1 ? "%d widgets" : "%d widget", n);
+
+7.
+    // consumption in square brackets
+    a.
+        n = 3
+        i = 10
+        x = 20.00
+        j = 30
+        [10 20 30]\n
+    b.
+        n = 3
+        i = 1
+        x = .0
+        j = 2
+        [1.0 2].0 3.0\n
+    c.
+        n = 3
+        i = 0
+        x = .1
+        j = 0
+        [0.1 0].2 0.3\n
+    d.
+        n = 0
+        i = unchanged
+        x = unchanged
+        j = unchanged
+        .1 .2 .3\n
+
+8. " %c" will read a tab character if in input whereas "%1s" will skips all white-space characters. // Wrong.
+
+9. getch() is not valid.
+
+10. In file src/fcopy.c.
+
+11. ch will have the value of 1, so it'll keep writing the ascii representation of 1 to the file.
+
+12.
+    int count_periods(const char *filename) {
+        FILE *fp;
+        int ch, n = 0;
+
+        if ((fp = fopen(filename, "r")) != NULL) {
+            while ((ch = fgetc(fp)) != EOF)
+                if (ch == '.')
+                    n++;
+            fclose(fp);
+        }
+
+        return n;
+    }
+
+13. In file src/line_length.c.
+
+14. In file src/fgets2.c
+
+15.
+    a. fseek(fp, n * 64, SEEK_SET);
+    b. fseek(fp, -64, SEEK_CUR);
+    c. fseek(fp, 64, SEEK_CUR);
+    d. fseek(fp, -2 * 64, SEEK_CUR);
+
+16. sscanf(str, "%*[^#]%*[#]%[0123456789,]", &sales_rank); // Wrong.

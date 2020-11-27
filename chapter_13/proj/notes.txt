@@ -1,0 +1,38 @@
+1. In file src/max_min_words.c.
+
+2.
+    a. In file src/remind2a.c // forgot to flush the buffer in this exercise.
+    b. In file src/remind2b.c
+    c. In file src/remind2c.c
+
+3. In file src/deal.c.
+
+4. In file src/reverse.c.
+
+5. In file src/sum.c.
+
+6. In file src/planet.c.
+
+7. In file src/num_words.c.
+
+8. In file src/scrabble.c.
+
+9. In file src/vowels.c.
+
+10. In file src/fmtname.c.
+
+11. In file src/wordlen.c.
+
+12. In file src/sent_rev.c.
+
+13. In file src/cipher.c.
+
+14. In file src/anagrams.c.
+
+15. In file src/calc.c.
+
+16. In file src/msg_rev.c
+
+17. In file src/palin.c.
+
+18. In file src/date.c.

@@ -1,0 +1,23 @@
+1. No warning from the compiler, but I've added the return statement in main function.
+
+2.
+    a. one "include" directive at the top.
+    b. Parkinson's Law:
+       Work expands so as to fill the time
+       available for its completion. 
+
+3. Changes in file src/dweight.c.
+
+4. In file src/uninitialized.c. floats are 0.0 and int do not have any pattern.
+
+5. a.
+
+6. More than one adjacent underscores in variables reduces their readibility.
+
+7. a, c, e.
+
+8. 14 tokens.
+
+9. answer = (3 * q - p * p) / 3;
+
+10. File: src/dweight_space.c. Removed every non-essential space in the code.

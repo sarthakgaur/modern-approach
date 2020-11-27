@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+void remove_pre_white();
+
+int main(void) {
+    remove_pre_white();
+    return 0;
+}
+
+void remove_pre_white() {
+    int ch;
+
+    ch = getchar();
+
+    while (ch != EOF) {
+        while ((ch == ' ' || ch == '\t' || ch == '\n') && ch != EOF)
+            ch = getchar();
+
+        if (ch == EOF)
+            return;
+
+        while (ch != '\n' && ch != EOF) {
+            putchar(ch);
+            ch = getchar();
+        }
+
+        if (ch == '\n')
+            putchar(ch);
+    }
+}
